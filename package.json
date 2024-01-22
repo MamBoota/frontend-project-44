@@ -2,11 +2,18 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/MamBoota/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MamBoota/frontend-project-44/actions)",
-  "main": "index.js",
+  "main": "brain-games.js",
   "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ci": "^2.3.0",
+    "link": "^2.1.0"
+  }
 }
