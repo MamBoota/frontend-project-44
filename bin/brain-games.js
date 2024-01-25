@@ -1,6 +1,13 @@
 #!/usr/bin/env node
-import getReadLineSync from '../src/cli.js';
+
+import getReadLineSyncName from '../src/cli.js';
+import getReadLineSyncQuestion from '../bin/brain-even.js';
 
 const greeting = 'Welcome to the Brain Games!\nMay I have your name?';
 console.log(greeting);
-console.log(`Hello, ${getReadLineSync()}!`);
+const nameUser = getReadLineSyncName();
+console.log(`Hello, ${nameUser}!`);
+
+const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
+console.log(condition);
+console.log(`${getReadLineSyncQuestion()} ${nameUser}!`);

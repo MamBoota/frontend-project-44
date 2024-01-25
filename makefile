@@ -4,5 +4,5 @@ brain-games:
 publish:
 	npm publish --dry-run
 
-make lint:
+lint:
 	npx eslint
