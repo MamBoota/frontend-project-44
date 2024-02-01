@@ -1,6 +1,9 @@
 import readLineSync from 'readline-sync';
 
-const getReadLineSyncQuestion = () => {
+const getReadLineSyncGameEven = () => {
+  const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
+  console.log(condition);
+
   const quantity = 3;
   let result = '';
   const answer1 = 'yes';
@@ -37,4 +40,4 @@ const getReadLineSyncQuestion = () => {
   return finish;
 };
 
-export default getReadLineSyncQuestion;
+export default getReadLineSyncGameEven;
