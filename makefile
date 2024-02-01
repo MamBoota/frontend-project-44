@@ -1,8 +1,19 @@
+setup: install
+
+install:
+	sudo npm ci
+
+build:
+	npm run build
+
+test:
+	ACTIONS_RUNNER_DEBUG=1 npx jest
+
 brain-games:
-	make brain-games
+	node bin/brain-games.js
 
 publish:
-	npm publish --dry-run
+	sudo npm publish --dry-run
 
 lint:
-	npx eslint
+	sudo npx eslint .

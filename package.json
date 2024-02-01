@@ -9,9 +9,9 @@
     "brain-even": "bin/brain-even.js"
   },
   "scripts": {
-    "test": "eslint"
+    "test": "jest"
   },
-  "author": "",
+  "author": "MamBoota",
   "license": "ISC",
   "dependencies": {
     "ci": "^2.3.0",

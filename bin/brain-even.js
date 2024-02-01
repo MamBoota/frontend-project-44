@@ -9,12 +9,10 @@ const getReadLineSyncQuestion = () => {
   const answerFailed = 'Let\'s try again,';
   const text = 'is wrong answer ;(. Correct answer was';
   const finish = 'Congratulations,';
-  const error = `Incorrect input!!! ${answerFailed}`;
 
   for (let i = 0; i < quantity; i += 1) {
     const randomNumber = Number(Math.floor(Math.random() * 100));
-    const question = `Question: ${randomNumber}`;
-    console.log(question);
+    console.log(`Question: ${randomNumber}`);
     const answerUser = readLineSync.question('Your answer: ');
     result = answerUser;
     if (result === answer1 || result === answer2) {
@@ -33,7 +31,7 @@ const getReadLineSyncQuestion = () => {
           return answerFailed;
         }
       }
-    } else return error;
+    } else return answerFailed;
   }
 
   return finish;
