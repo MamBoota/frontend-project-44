@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
-import getReadLineSyncName from '../src/cli.js';
-import getReadLineSyncSelectedGame from '../src/index.js';
+import getReadLineSyncQuestion from '../src/cli.js';
 
-const greeting = 'Welcome to the Brain Games!\nMay I have your name?';
+export const greeting = 'Welcome to the Brain Games!\nMay I have your name?';
 console.log(greeting);
 
-const nameUser = getReadLineSyncName();
+export const nameUser = getReadLineSyncQuestion();
 console.log(`Hello, ${nameUser}!`);
-console.log(`${getReadLineSyncSelectedGame()} ${nameUser}!`);

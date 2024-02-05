@@ -1,8 +1,8 @@
 import readLineSync from 'readline-sync'
 
-const getReadLineSyncName = () => {
+const getReadLineSyncQuestion = () => {
   const question = readLineSync.question('Your answer: ')
   return question
 }
 
-export default getReadLineSyncName
+export default getReadLineSyncQuestion
