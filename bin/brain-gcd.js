@@ -1,5 +1,5 @@
-// #!/usr/bin/env node
+#!/usr/bin/env node
 
-// import getReadLineSyncGameGCD from '../src/games/game-gcd.js'
+import getReadLineSyncGameGCD from '../src/games/game-gcd.js'
 
-// getReadLineSyncGameGCD()
+getReadLineSyncGameGCD()
