@@ -4,13 +4,14 @@
   "description": "[![Actions Status](https://github.com/MamBoota/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MamBoota/frontend-project-44/actions)",
   "main": "index.js",
   "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
-  },
-  "scripts": {
-    "test": "jest"
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js"
   },
   "author": "MamBoota",
   "license": "ISC",
