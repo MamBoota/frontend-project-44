@@ -1,16 +1,15 @@
-import { answerFailed, answerOk, finish, getRandomInt, quantityGames, text } from '../index.js'
+import { answerFailed, answerOk, finish, getRandomInt, quantityGames, text, getDescription } from '../index.js'
 import getReadLineSyncQuestion from '../cli.js'
 
 const getReadLineSyncGameCalc = () => {
-  const description = 'What is the result of the expression?'
-  console.log(description)
+  console.log(getDescription('What is the result of the expression?'))
 
   const meaning = ['+', '-', '*']
 
   for (let i = 0; i < quantityGames; i += 1) {
-    const randomNumber1 = getRandomInt()
-    const randomNumber2 = getRandomInt()
-    const operator = meaning[Number(Math.floor(Math.random() * meaning.length))]
+    const randomNumber1 = getRandomInt(100)
+    const randomNumber2 = getRandomInt(100)
+    const operator = meaning[getRandomInt(meaning.length)]
     console.log(`Question: ${randomNumber1} ${operator} ${randomNumber2}`)
     const answerUser = Number(getReadLineSyncQuestion())
 

@@ -5,7 +5,7 @@ const getReadLineSyncGameEven = () => {
   console.log(getDescription('Answer "yes" if the number is even, otherwise answer "no".'))
 
   for (let i = 0; i < quantityGames; i += 1) {
-    const randomNumber = getRandomInt()
+    const randomNumber = getRandomInt(100)
     console.log(`Question: ${randomNumber}`)
     const answerUser = getReadLineSyncQuestion()
     if (answerUser === 'yes' || answerUser === 'no') {
