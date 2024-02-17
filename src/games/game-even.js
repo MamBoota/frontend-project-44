@@ -1,4 +1,4 @@
-import { getRandomInt } from './game-tools/tools.js';
+import { getRandomInt } from '../game-tools/tools.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
