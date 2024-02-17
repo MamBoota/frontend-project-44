@@ -1,6 +1,6 @@
 import { getRandomInt } from '../games/game-tools/tools.js'
 
-const description = 'Answer "yes" if the number is even, otherwise answer "no".'
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 const getReadLineSyncGamePrime = () => {
   const randomNumber = getRandomInt(2, 160)
