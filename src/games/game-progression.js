@@ -1,18 +1,6 @@
-import { getRandomInt } from '../games/game-tools/tools.js';
+import { getRandomInt } from './game-tools/tools.js';
 
 const description = 'What number is missing in the progression?';
-
-const getReadLineSyncGameProgression = () => {
-  const arithmeticProgression = getArithmeticProgression();
-  const index = getRandomInt(0, arithmeticProgression.length - 1);
-  const answerCorrect = `${arithmeticProgression[index]}`;
-
-  arithmeticProgression[index] = '..';
-
-  const gameQuestion = `Question: ${arithmeticProgression.join(' ')}`;
-
-  return [gameQuestion, answerCorrect];
-};
 
 const getArithmeticProgression = () => {
   const startNumber = Number(getRandomInt());
@@ -28,6 +16,18 @@ const getArithmeticProgression = () => {
   }
 
   return arrayProgression;
+};
+
+const getReadLineSyncGameProgression = () => {
+  const arithmeticProgression = getArithmeticProgression();
+  const index = getRandomInt(0, arithmeticProgression.length - 1);
+  const answerCorrect = `${arithmeticProgression[index]}`;
+
+  arithmeticProgression[index] = '..';
+
+  const gameQuestion = `Question: ${arithmeticProgression.join(' ')}`;
+
+  return [gameQuestion, answerCorrect];
 };
 
 export { description, getReadLineSyncGameProgression };
