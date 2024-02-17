@@ -6,7 +6,7 @@ const getReadLineSyncGameCalc = () => {
   const leftNumber = getRandomInt()
   const rightNumber = getRandomInt()
   const meaning = ['+', '-', '*']
-  const operator = meaning[getRandomInt(meaning.length)]
+  const operator = meaning[getRandomInt(1, meaning.length)]
   const gameQuestion = `Question: ${leftNumber} ${operator} ${rightNumber}`
   const answerCorrect = `${checkAnswer(leftNumber, operator, rightNumber)}`
 
