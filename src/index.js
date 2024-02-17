@@ -16,8 +16,6 @@ const runGameLogic = (description, game) => {
     if (answerUser === answerCorrect) {
       console.log('Correct!')
     } else {
-      console.log(typeof answerUser)
-      console.log(typeof answerCorrect)
       return console.log(`'${answerUser}' 'is wrong answer ;(. Correct answer was' '${answerCorrect}'.\nLet's try again, ${nameUser}!`)
     }
   }

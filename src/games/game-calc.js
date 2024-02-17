@@ -3,8 +3,8 @@ import { getRandomInt } from '../games/game-tools/tools.js'
 const description = 'What is the result of the expression?'
 
 const getReadLineSyncGameCalc = () => {
-  const leftNumber = getRandomInt(100)
-  const rightNumber = getRandomInt(100)
+  const leftNumber = getRandomInt()
+  const rightNumber = getRandomInt()
   const meaning = ['+', '-', '*']
   const operator = meaning[getRandomInt(meaning.length)]
   const gameQuestion = `Question: ${leftNumber} ${operator} ${rightNumber}`

@@ -3,8 +3,8 @@ import { getRandomInt } from '../games/game-tools/tools.js'
 const description = 'Find the greatest common divisor of given numbers.'
 
 const getReadLineSyncGameGCD = () => {
-  const randomNumber1 = getRandomInt(100)
-  const randomNumber2 = getRandomInt(100)
+  const randomNumber1 = getRandomInt(1, 100)
+  const randomNumber2 = getRandomInt(1, 100)
   const gameQuestion = `Question: ${randomNumber1} ${randomNumber2}`
   const answerCorrect = `${getMaxDivider(getDivider(randomNumber1), getDivider(randomNumber2))}`
 

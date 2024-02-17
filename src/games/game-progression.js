@@ -4,7 +4,7 @@ const description = 'What number is missing in the progression?'
 
 const getReadLineSyncGameProgression = () => {
   const arithmeticProgression = getArithmeticProgression()
-  const index = getRandomInt(arithmeticProgression.length)
+  const index = getRandomInt(1, arithmeticProgression.length)
   const answerCorrect = `${arithmeticProgression[index]}`
 
   arithmeticProgression[index] = '..'
@@ -15,10 +15,10 @@ const getReadLineSyncGameProgression = () => {
 }
 
 const getArithmeticProgression = () => {
-  const startNumber = Number(getRandomInt(100))
-  const stepProgression = Number(getRandomInt(5)) + 1
+  const startNumber = Number(getRandomInt())
+  const stepProgression = Number(getRandomInt(1, 5))
   let nextNumber = startNumber + stepProgression
-  const lengthProgression = Number(getRandomInt(5)) + 5
+  const lengthProgression = Number(getRandomInt(5, 10))
 
   const arrayProgression = [startNumber]
 
