@@ -1,27 +1,14 @@
-import { getDescription, quantityGames, getRandomInt, answerOk, text, answerFailed, finish } from '../index.js'
-import getReadLineSyncQuestion from '../cli.js'
+import { getRandomInt } from '../games/game-tools/tools.js'
+
+const description = 'Find the greatest common divisor of given numbers.'
 
 const getReadLineSyncGameGCD = () => {
-  console.log(getDescription('Find the greatest common divisor of given numbers.'))
+  const randomNumber1 = getRandomInt(100)
+  const randomNumber2 = getRandomInt(100)
+  const gameQuestion = `Question: ${randomNumber1} ${randomNumber2}`
+  const answerCorrect = `${getMaxDivider(getDivider(randomNumber1), getDivider(randomNumber2))}`
 
-  for (let i = 0; i < quantityGames; i += 1) {
-    const randomNumber3 = getRandomInt(100)
-    const randomNumber4 = getRandomInt(100)
-    const maxDivider = getMaxDivider(getDivider(randomNumber3), getDivider(randomNumber4))
-    console.log(`Question: ${randomNumber3} ${randomNumber4}`)
-    const answerUser = Number(getReadLineSyncQuestion())
-
-    if (answerUser !== answerUser.toString) {
-      if (answerUser === maxDivider) {
-        console.log(`${answerOk}`)
-      } else if (answerUser !== maxDivider) {
-        console.log(`'${answerUser}' ${text} '${maxDivider}'.`)
-        return console.log(answerFailed)
-      }
-    } else return console.log(answerFailed)
-  }
-
-  return console.log(finish)
+  return [gameQuestion, answerCorrect]
 }
 
 const getDivider = (number) => {
@@ -47,7 +34,7 @@ const getMaxDivider = (array1, array2) => {
     }
   }
 
-  return Number(result.slice(-1))
+  return result.slice(-1)
 }
 
-export default getReadLineSyncGameGCD
+export { description, getReadLineSyncGameGCD }

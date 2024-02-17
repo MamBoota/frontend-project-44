@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
 import runGameLogic from '../src/index.js'
-import { getReadLineSyncGameCalc, description } from '../src/games/game-calc.js'
+import { description, getReadLineSyncGameCalc } from '../src/games/game-calc.js'
 
-runGameLogic(getReadLineSyncGameCalc, description)
+runGameLogic(description, getReadLineSyncGameCalc)

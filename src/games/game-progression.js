@@ -1,30 +1,17 @@
-import { answerFailed, answerOk, finish, getRandomInt, quantityGames, text, getDescription } from '../index.js'
-import getReadLineSyncQuestion from '../cli.js'
+import { getRandomInt } from '../games/game-tools/tools.js'
+
+const description = 'What number is missing in the progression?'
 
 const getReadLineSyncGameProgression = () => {
-  console.log(getDescription('What number is missing in the progression?'))
+  const arithmeticProgression = getArithmeticProgression()
+  const index = getRandomInt(arithmeticProgression.length)
+  const answerCorrect = `${arithmeticProgression[index]}`
 
-  for (let i = 0; i < quantityGames; i += 1) {
-    const arithmeticProgression = getArithmeticProgression()
-    const index = getRandomInt(arithmeticProgression.length)
-    const value = arithmeticProgression[index]
+  arithmeticProgression[index] = '..'
 
-    arithmeticProgression[index] = '..'
+  const gameQuestion = `Question: ${arithmeticProgression.join(' ')}`
 
-    console.log(`Question: ${arithmeticProgression.join(' ')}`)
-    const answerUser = Number(getReadLineSyncQuestion())
-
-    if (answerUser !== answerUser.toString) {
-      if (answerUser === value) {
-        console.log(`${answerOk}`)
-      } else if (answerUser !== value) {
-        console.log(`'${answerUser}' ${text} '${value}'.`)
-        return console.log(answerFailed)
-      }
-    } else return console.log(answerFailed)
-  }
-
-  return console.log(finish)
+  return [gameQuestion, answerCorrect]
 }
 
 const getArithmeticProgression = () => {
@@ -43,4 +30,4 @@ const getArithmeticProgression = () => {
   return arrayProgression
 }
 
-export default getReadLineSyncGameProgression
+export { description, getReadLineSyncGameProgression }
