@@ -28,6 +28,9 @@ brain-prime:
 publish:
 	sudo npm publish --dry-run
 
+fix:
+	npm run lint -- --fix
+
 link:
 	sudo npm link
 
