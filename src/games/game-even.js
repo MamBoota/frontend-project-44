@@ -1,33 +1,27 @@
-import { answerFailed, answerOk, finish, getRandomInt, getDescription, quantityGames, text } from '../index.js'
-import getReadLineSyncQuestion from '../cli.js'
+import { getRandomInt } from '../games/game-tools/tools.js'
 
-const getReadLineSyncGameEven = () => {
-  console.log(getDescription('Answer "yes" if the number is even, otherwise answer "no".'))
+const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
-  for (let i = 0; i < quantityGames; i += 1) {
-    const randomNumber = getRandomInt(100)
-    console.log(`Question: ${randomNumber}`)
-    const answerUser = getReadLineSyncQuestion()
-    if (answerUser === 'yes' || answerUser === 'no') {
-      if (answerUser === 'yes') {
-        if (randomNumber % 2 === 0) {
-          console.log(`${answerOk}`)
-        } else if (randomNumber % 2 !== 0) {
-          console.log(`'${answerUser}' ${text} 'no'`)
-          return console.log(answerFailed)
-        }
-      } else if (answerUser === 'no') {
-        if (randomNumber % 2 !== 0) {
-          console.log(`${answerOk}`)
-        } else if (randomNumber % 2 === 0) {
-          console.log(`'${answerUser}' ${text} 'yes'`)
-          return console.log(answerFailed)
-        }
-      }
-    } else return console.log(answerFailed)
+const checkAnswer = (answer) => {
+  switch (answer) {
+    case 'yes':
+      return answer
+    case 'no':
+      return answer
+    default:
+      return answer ? 'yes' : 'no'
   }
-
-  return console.log(finish)
 }
 
-export default getReadLineSyncGameEven
+const getReadLineSyncGameEven = () => {
+  const randomNumber = getRandomInt(100)
+  const gameQuestion = `Question: ${randomNumber}`
+  const checkRandomNumber = randomNumber % 2 === 0
+  const answerCorrect = checkRandomNumber ? 'yes' : 'no'
+
+  if (answerCorrect === checkAnswer(answerCorrect)) {
+    return [gameQuestion, answerCorrect]
+  }
+}
+
+export { description, getReadLineSyncGameEven }

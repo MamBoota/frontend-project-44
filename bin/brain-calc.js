@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import getReadLineSyncGameCalc from '../src/games/game-calc.js'
+import runGameLogic from '../src/index.js'
+import { getReadLineSyncGameCalc, description } from '../src/games/game-calc.js'
 
-getReadLineSyncGameCalc()
+runGameLogic(getReadLineSyncGameCalc, description)

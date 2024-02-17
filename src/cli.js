@@ -1,8 +1,8 @@
 import readLineSync from 'readline-sync'
 
-const getReadLineSyncQuestion = () => {
-  const question = readLineSync.question('Your answer: ')
-  return question
+const getNamedGreeting = () => {
+  const nameUser = readLineSync.question('May I have your name? ')
+  return `Hello, ${nameUser}!`
 }
 
-export default getReadLineSyncQuestion
+export default getNamedGreeting

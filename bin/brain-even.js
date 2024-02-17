@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import getReadLineSyncGameEven from '../src/games/game-even.js'
+import runGameLogic from '../src/index.js'
+import { getReadLineSyncGameEven, description } from '../src/games/game-even.js'
 
-getReadLineSyncGameEven()
+runGameLogic(getReadLineSyncGameEven, description)

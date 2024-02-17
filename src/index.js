@@ -1,17 +1,26 @@
-import { nameUser } from '../bin/brain-games.js'
+import readLineSync from 'readline-sync'
 
-export const getDescription = (str) => {
-  const description = str
-  return description
+const runGameLogic = (description, game) => {
+  console.log('Welcome to the Brain Games!')
+  const nameUser = readLineSync.question('May I have your name? ')
+  console.log(`Hello, ${nameUser}!`)
+
+  console.log(description)
+
+  const quantityGames = 3
+  for (let i = 0; i < quantityGames; i += 1) {
+    const [gameQuestion, answerCorrect] = game()
+    console.log(gameQuestion)
+    const answerUser = readLineSync.question('Your answer: ')
+
+    if (answerUser === answerCorrect) {
+      console.log('Correct!')
+    } else {
+      return console.log(`'${answerUser}' 'is wrong answer ;(. Correct answer was' '${answerCorrect}'.\nLet's try again, ${nameUser}!`)
+    }
+  }
+
+  console.log(`Congratulations, ${nameUser}!`)
 }
 
-export const quantityGames = 3
-export const answerOk = 'Correct!'
-export const answerFailed = `Let's try again, ${nameUser}!`
-export const text = 'is wrong answer ;(. Correct answer was'
-export const finish = `Congratulations, ${nameUser}!`
-
-export const getRandomInt = (number) => {
-  const randomNumber = Number(Math.floor(Math.random() * number))
-  return randomNumber
-}
+export default runGameLogic

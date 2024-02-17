@@ -18,7 +18,7 @@ const getReadLineSyncGameProgression = () => {
       if (answerUser === value) {
         console.log(`${answerOk}`)
       } else if (answerUser !== value) {
-        console.log(`'${answerUser}' ${text} '${value}'`)
+        console.log(`'${answerUser}' ${text} '${value}'.`)
         return console.log(answerFailed)
       }
     } else return console.log(answerFailed)

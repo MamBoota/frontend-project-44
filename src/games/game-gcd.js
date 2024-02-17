@@ -15,7 +15,7 @@ const getReadLineSyncGameGCD = () => {
       if (answerUser === maxDivider) {
         console.log(`${answerOk}`)
       } else if (answerUser !== maxDivider) {
-        console.log(`'${answerUser}' ${text} '${maxDivider}'`)
+        console.log(`'${answerUser}' ${text} '${maxDivider}'.`)
         return console.log(answerFailed)
       }
     } else return console.log(answerFailed)
