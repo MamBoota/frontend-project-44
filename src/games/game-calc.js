@@ -1,4 +1,4 @@
-import { getRandomInt } from '../game-tools/tools.js';
+import getRandomInt from './game-tools/tools.js';
 
 const description = 'What is the result of the expression?';
 
