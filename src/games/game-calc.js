@@ -15,18 +15,13 @@ const isAnswer = (leftNumber, operator, rightNumber) => {
   }
 };
 
-const getOperator = () => {
-  const meaning = ['+', '-', '*'];
-  const operator = meaning[Math.floor(Math.random() * meaning.length)];
-
-  return operator;
-};
-
 const getReadLineSyncGameCalc = () => {
   const leftNumber = getRandomInt();
   const rightNumber = getRandomInt();
-  const gameQuestion = `Question: ${leftNumber} ${getOperator()} ${rightNumber}`;
-  const answerCorrect = `${isAnswer(leftNumber, getOperator(), rightNumber)}`;
+  const meaning = ['+', '-', '*'];
+  const operator = meaning[Math.floor(Math.random() * meaning.length)];
+  const gameQuestion = `Question: ${leftNumber} ${operator} ${rightNumber}`;
+  const answerCorrect = `${isAnswer(leftNumber, operator, rightNumber)}`;
 
   return [gameQuestion, answerCorrect];
 };
