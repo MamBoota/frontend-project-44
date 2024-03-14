@@ -1,4 +1,4 @@
-import getRandomInt from './../tools.js';
+import getRandomInt from '../tools.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
