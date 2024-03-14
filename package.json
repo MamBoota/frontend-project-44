@@ -1,8 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/MamBoota/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MamBoota/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "5 in 1 Console Games Brain Games",
   "type": "module",
   "scripts": {
     "test": "jest",
@@ -20,7 +19,6 @@
   "author": "MamBoota",
   "license": "ISC",
   "dependencies": {
-    "ci": "^2.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "link": "^2.1.0",
     "readline-sync": "^1.4.10"

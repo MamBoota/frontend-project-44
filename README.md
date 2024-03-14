@@ -17,27 +17,19 @@
 
 1. Clone repository
 
-```
 git clone git@github.com:MamBoota/frontend-project-44.git
-```
 
 2. Go to project directory
 
-```
 cd frontend-project-44/
-```
 
 3. Install from make file
 
-```
 make install
-```
 
 4. For a global installation of a package from a local directory, use the NPM Link command
 
-```
 make link
-```
 
 ### Example "brain-even" game.
 
