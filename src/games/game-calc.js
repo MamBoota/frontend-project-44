@@ -1,4 +1,5 @@
 import getRandomInt from '../tools.js';
+import runGameLogic from '../index.js';
 
 const description = 'What is the result of the expression?';
 
@@ -26,4 +27,4 @@ const getReadLineSyncGameCalc = () => {
   return [gameQuestion, answerCorrect];
 };
 
-export { description, getReadLineSyncGameCalc };
+export default () => runGameLogic(description, getReadLineSyncGameCalc);

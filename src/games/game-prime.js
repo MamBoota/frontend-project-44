@@ -1,4 +1,5 @@
 import getRandomInt from '../tools.js';
+import runGameLogic from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -18,4 +19,4 @@ const getReadLineSyncGamePrime = () => {
   return [gameQuestion, answerCorrect];
 };
 
-export { description, getReadLineSyncGamePrime };
+export default () => runGameLogic(description, getReadLineSyncGamePrime);

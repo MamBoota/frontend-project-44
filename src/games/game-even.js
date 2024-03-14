@@ -1,4 +1,5 @@
 import getRandomInt from '../tools.js';
+import runGameLogic from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -12,4 +13,4 @@ const getReadLineSyncGameEven = () => {
   return [gameQuestion, answerCorrect];
 };
 
-export { description, getReadLineSyncGameEven };
+export default () => runGameLogic(description, getReadLineSyncGameEven);

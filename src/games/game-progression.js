@@ -1,4 +1,5 @@
 import getRandomInt from '../tools.js';
+import runGameLogic from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -30,4 +31,4 @@ const getReadLineSyncGameProgression = () => {
   return [gameQuestion, answerCorrect];
 };
 
-export { description, getReadLineSyncGameProgression };
+export default () => runGameLogic(description, getReadLineSyncGameProgression);
